@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+    <style>
+        img
+        {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    {% block body_block %}
+    <center>
+    <a href="https://en.wikipedia.org/wiki/India_national_cricket_team"> <h1 class="btn btn-primary">HOME</h1></a>
+    </center>
+    {% endblock %}
+    <center>
+    <div class="carousel silde" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/msd.jpeg' %}" alt="">
+            </div>
+            <div class="carousel-item ">
+                <img src="{% static 'images/kohli.jpeg' %}" alt="">
+            </div>
+            <div class="carousel-item ">
+                <img src="{% static 'images/rohit.jpeg' %}" alt="">
+            </div>
+        </div>
+    </div>
+    </center>
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/mdb.js' %}"></script>
+    <script>
+        $('.carousel').carousel({
+            'interval': 2000,
+            'pause':'hover'
+        })
+    </script>
+</body>
+</html>
